@@ -18,6 +18,10 @@ function Lading(){
         navigate('GiveClasses');
     }
 
+    function HandleNavigateToStudyPages(){
+        navigate('Study');
+    }
+
     return (
         <View style={styles.container}>
             <Image source={ladingImg} style={styles.banner}/>
@@ -29,7 +33,10 @@ function Lading(){
        
 
             <View style={styles.buttonsContainer}>
-                <RectButton style={[styles.button, styles.buttonPrimary]}>
+                <RectButton 
+                    onPress={HandleNavigateToStudyPages} 
+                    style={[styles.button, styles.buttonPrimary]}
+                >
                     <Image source={studyIcon}/>
                     <Text style={styles.buttonText}>Estudar</Text>
                 </RectButton>
